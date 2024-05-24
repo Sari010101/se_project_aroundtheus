@@ -9,10 +9,12 @@ The like-buttons indicate it is meant to be shared and appreciated.
 ### What for?
 
 This is a project to study different responsive design tools, with basic html and CSS knowledge:
-* __CSS Grid__ is used without media queries. The layout shifts from 3 columns to 2 and to 1 and adapts to the screen size:
+* __CSS Grid__ is used without media queries.
+The layout shifts from 3 columns to 2 and to 1 and adapts to the screen size:
 [CSS Grid GIF](https://github.com/Sari010101/se_project_aroundtheus/blob/main/Grid.gif)
 
-* __Media Queries__ are used where the layout breaks. The Devtool shows where the media queries are:
+* __Media Queries__ are used where the layout breaks.
+The Devtool shows where the media queries are:
 [Media Querie GIF](https://github.com/Sari010101/se_project_aroundtheus/blob/main/mediaqueries.gif)
 
 * __Others__
