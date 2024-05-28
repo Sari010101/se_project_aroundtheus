@@ -22,3 +22,20 @@
   position: relative;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 925px) {
+  .page__content {
+    margin: auto 20px;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .page__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page__content {
+    margin: auto;
+  }

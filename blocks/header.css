@@ -6,3 +6,20 @@
   position: relative;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 625px) {
+  .header {
+    padding-left: 2%;
+    width: calc(100% - 30px);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    border-bottom: 1px solid #404040;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
