@@ -18,7 +18,10 @@
   .header {
     box-sizing: border-box;
     padding: 28px 167px 32px 27px;
-    margin: 0;
     width: 100%;
+  }
+  .header__logo {
+    width: 124px;
+    height: 24px;
   }
 }

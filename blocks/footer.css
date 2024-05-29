@@ -17,5 +17,6 @@
   .footer {
     font-size: 14px;
     padding: 48px 19px 36px;
+    width: calc(100% - 38px);
   }
 }
