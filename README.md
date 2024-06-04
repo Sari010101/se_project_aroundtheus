@@ -1,4 +1,5 @@
 # Project 3: [Around The U.S.](https://sari010101.github.io/se_project_aroundtheus/)
+[Video about the project](https://reccloud.com/u/wzf6wnf)
 
 ### What is it?
 
