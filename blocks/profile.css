@@ -127,3 +127,13 @@
     margin: 0;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .profile__title {
+    max-width: 200px;
+  }
+
+  .profile__Description {
+    max-width: 200px;
+  }
+}
