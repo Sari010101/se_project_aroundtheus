@@ -28,8 +28,10 @@ I also learned in the process how to:
 * use [Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)  ,
 and about different formats like svg for logos, and png and their transparent background.
 
-* use Google fonts, download and setup fonts.
+* download, connect and setup fonts.
 
 * compress images on [tinyPNG](https://tinypng.com/), so the project loads faster. 
 
 * add GIFs to README files.
+
+* record videos to explain a project 
