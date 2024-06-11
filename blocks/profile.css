@@ -129,6 +129,16 @@
 }
 
 @media screen and (max-width: 320px) {
+  .profile__info {
+    position: relative;
+  }
+
+  .profile__edit-button {
+    position: absolute;
+    right: -28px;
+    top: 35px;
+  }
+
   .profile__title {
     max-width: 200px;
   }
