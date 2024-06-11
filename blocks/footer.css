@@ -19,4 +19,9 @@
     padding: 48px 19px 36px;
     width: calc(100% - 38px);
   }
+
+  .footer__copyright {
+    margin: 0;
+    padding: 0;
+  }
 }
