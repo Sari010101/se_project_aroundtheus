@@ -107,9 +107,6 @@
 
   .profile__description {
     font-size: 14px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
     margin-bottom: 36px;
     max-width: 282px;
   }
@@ -123,7 +120,7 @@
     background: transparent url(../images/Add\ Button\ S.svg) center no-repeat;
     width: 282px;
     height: 50px;
-    border-width: 1px;
+    border-width: 2px;
     margin: 0;
   }
 }

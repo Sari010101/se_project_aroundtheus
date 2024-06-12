@@ -13,15 +13,15 @@
   text-align: left;
 }
 
+.footer__description {
+  margin: 0;
+  padding: 0;
+}
+
 @media screen and (max-width: 625px) {
   .footer {
     font-size: 14px;
     padding: 48px 19px 36px;
     width: calc(100% - 38px);
-  }
-
-  .footer__copyright {
-    margin: 0;
-    padding: 0;
   }
 }
