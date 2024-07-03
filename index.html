@@ -38,6 +38,7 @@
               aria-label="edit"
               class="profile__edit-button"
               type="button"
+              id="profile-edit-button"
             ></button>
             <p class="profile__description">Explorer</p>
           </div>
@@ -146,9 +147,9 @@
         <p class="footer__copyright">&copy; 2022 Around the U.S.</p>
       </footer>
     </div>
-    <div class="modal">
+    <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
-        <button class="modal__close"></button>
+        <button class="modal__close" id="profile-close-button"></button>
         <p class="modal__heading">Edit Profile</p>
         <form class="modal__form">
           <input type="text" class="title" placeholder="Title" />
