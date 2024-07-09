@@ -24,21 +24,21 @@
 
 .modal__close {
   border: none;
-  background-color: transparent;
   cursor: pointer;
   position: absolute;
   top: -45px;
   right: -45px;
   background-image: url(../images/Modal\ Close\ Icon.svg);
-  width: 35px;
-  height: 35px;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
+  width: 35px;
+  height: 35px;
   transition: 0.5s;
 }
 
 .modal__close:hover {
-  background-image: rgba(225, 255, 255, 0.6);
+  opacity: 0.6;
 }
 
 .modal__heading {
