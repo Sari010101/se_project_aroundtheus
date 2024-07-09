@@ -38,7 +38,7 @@
 }
 
 .modal__close:hover {
-  background: rgba(255, 255, 255, 0.6);
+  background-image: rgba(225, 255, 255, 0.6);
 }
 
 .modal__heading {
