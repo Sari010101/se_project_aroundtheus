@@ -77,11 +77,34 @@
         </form>
       </div>
     </div>
+    <div class="modal" id="add-card-modal">
+      <div class="modal__container">
+        <button class="modal__close" id="profile-close-button"></button>
+        <p class="modal__heading">New Place</p>
+        <form class="modal__form" id="add-card-form">
+          <input
+            name="title"
+            class="modal__input title modal__input_type_title"
+            type="text"
+            id="profile-title-input"
+            placeholder="Title"
+          />
+          <input
+            name="url"
+            class="modal__input description modal__input_type_url"
+            type="text"
+            id="profile-description-input"
+            placeholder="Image link"
+          />
+          <button class="modal__button" id="modal-save-button">Create</button>
+        </form>
+      </div>
+    </div>
     <template id="card-template">
       <li class="card">
         <img src="" class="card__image" alt="" />
         <div class="card__description">
-          <h2 class="card__title"></h2>
+          <h2 class="card__title" id="card__title"></h2>
           <button
             aria-label="like"
             class="card__like-button"
