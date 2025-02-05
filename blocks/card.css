@@ -2,6 +2,7 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .card__image {
@@ -43,4 +44,27 @@
 
 .card__like-button:hover {
   opacity: 0.5;
+}
+.card__like-button_active {
+  background: transparent url(../images/Heart\ active.svg) center no-repeat;
+}
+
+.card__trash-button {
+  position: absolute;
+  background: transparent url(../images/Trash.svg) center no-repeat;
+  margin: auto;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  height: 19.3px;
+  width: 18px;
+  z-index: 1;
+  top: 18px;
+  right: 15px;
+}
+
+.card__trash-button:hover {
+  opacity: 50%;
+  transition: 0.2s ease-in;
+  cursor: pointer;
 }
