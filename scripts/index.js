@@ -46,13 +46,17 @@ const cardTemplate =
 
 const addButton = document.querySelector(".profile__add-button");
 const addCardModal = document.querySelector("#add-card-modal");
-const addCardFormElement = addCardModal.querySelector(".modal__form");
+const addCardFormEl = addCardModal.querySelector(".modal__form");
 const cardCloseButton = addCardModal.querySelector("#card-close-button");
 
-const cardTitleInput = addCardFormElement.querySelector(
-  ".modal__input_type_title"
+const cardTitleInput = addCardFormEl.querySelector(".modal__input_type_title");
+const cardUrlInput = addCardFormEl.querySelector(".modal__input_type_url");
+const previewModal = document.querySelector("#preview-modal");
+const modalImageEl = previewModal.querySelector(".modal__image");
+const modalCaptionEl = previewModal.querySelector(".modal__caption");
+const modalCloseButton = previewModal.querySelector(
+  ".modal__close_type_preview"
 );
-const cardUrlInput = addCardFormElement.querySelector(".modal__input_type_url");
 
 // Functions
 
@@ -63,6 +67,14 @@ function closePopup(modal) {
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
+  cardImageEl.addEventListener("click", () => {
+    openPopup(previewModal);
+    modalImageEl.src = cardData.link;
+    modalImageEl.alt = cardData.name;
+    modalCaptionEl.textContent = cardData.name;
+  });
+  modalCloseButton.addEventListener("click", () => closePopup(previewModal));
+
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardLikeButton = cardElement.querySelector(".card__like-button");
   cardLikeButton.addEventListener("click", () => {

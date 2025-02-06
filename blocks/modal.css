@@ -22,6 +22,21 @@
   border-radius: 10px;
 }
 
+.modal__container_type_preview {
+  position: relative;
+  background-color: none;
+  margin: auto;
+  padding: 0;
+  border-radius: 0;
+}
+
+.modal__image {
+  width: 100%;
+  object-fit: contain;
+  max-width: 75vw;
+  max-height: 75vh;
+}
+
 .modal__close {
   border: none;
   cursor: pointer;
