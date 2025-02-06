@@ -97,7 +97,7 @@ function openPopup(modal) {
 
 function renderCard(cardData, wrapper) {
   const cardElement = getCardElement(cardData);
-  wrapper.prepend(cardElement);
+  wrapper.append(cardElement);
 }
 
 // Event Handlers
