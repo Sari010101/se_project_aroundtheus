@@ -42,3 +42,13 @@ I also learned in the process how to:
 - create a popup with JS
 
 - create templates for the cards to avoid hard-coded HTML
+
+#### Project 5 additions
+
+- reuse project 4 popup code for card modal
+
+- create new cards with card modal
+
+- delete a whole card by clicking on trash can icon
+
+- smooth transitions when opening and closing card preview ![](https://github.com/Sari010101/se_project_aroundtheus/blob/main/gifs/Smooth%20transition.gif)
