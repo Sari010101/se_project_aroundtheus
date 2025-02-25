@@ -26,7 +26,7 @@
 
 .modal__container {
   position: relative;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 1);
   margin: auto;
   padding: 36px;
   border-radius: 10px;
@@ -101,11 +101,14 @@
 }
 
 .modal__input_type_error {
-  border-bottom: 1px solid #ff0000;
+  border-bottom: 1px solid rgba(255, 0, 0, 1);
 }
 
-.modal__error_visible {
+.modal__error {
   color: #ff0000;
+}
+.modal__error_visible {
+  opacity: 1;
 }
 
 .modal__button {
@@ -113,7 +116,7 @@
   height: 50.15px;
   margin-top: 48px;
   color: #fff;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 1);
   font-size: 18px;
   border-radius: 2px;
   /* border: none; */
