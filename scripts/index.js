@@ -61,10 +61,6 @@ const closeButtons = document.querySelectorAll(".modal__close");
 
 // Functions
 
-function closePopup(modal) {
-  modal.classList.remove("modal_opened");
-}
-
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
@@ -74,9 +70,6 @@ function getCardElement(cardData) {
     modalImageEl.alt = cardData.name;
     modalCaptionEl.textContent = cardData.name;
   });
-  // previewModalCloseButton.addEventListener("click", () =>
-  //   closePopup(previewModal)
-  // );
 
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardLikeButton = cardElement.querySelector(".card__like-button");
@@ -94,13 +87,34 @@ function getCardElement(cardData) {
   return cardElement;
 }
 
-function openPopup(modal) {
-  modal.classList.add("modal_opened");
-}
-
 function renderCard(cardData, wrapper) {
   const cardElement = getCardElement(cardData);
   wrapper.prepend(cardElement);
+}
+
+function openPopup(modal) {
+  modal.classList.add("modal_opened");
+  document.addEventListener("keydown", closeModalEsc);
+  modal.addEventListener("mousedown", closeOverlay);
+}
+
+function closePopup(modal) {
+  modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", closeModalEsc);
+  modal.removeEventListener("mousedown", closeOverlay);
+}
+
+function closeOverlay(evt) {
+  if (evt.target.classList.contains("modal")) {
+    closePopup(evt.target);
+  }
+}
+
+function closeModalEsc(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal_opened");
+    closePopup(openModal);
+  }
 }
 
 // Event Handlers
@@ -128,11 +142,6 @@ profileEditButton.addEventListener("click", () => {
   profileDescriptionInput.value = profileDescription.textContent;
   openPopup(profileEditModal);
 });
-
-// profileCloseButton.addEventListener("click", () =>
-//   closePopup(profileEditModal)
-// );
-//cardCloseButton.addEventListener("click", () => closePopup(addCardModal));
 
 profileFormEl.addEventListener("submit", handleProfileEditSubmit);
 addCardFormEl.addEventListener("submit", handleAddCardFormSubmit);

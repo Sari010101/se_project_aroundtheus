@@ -56,6 +56,7 @@
         <p class="footer__copyright">&copy; 2022 Around the U.S.</p>
       </footer>
     </div>
+
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
         <button class="modal__close" id="profile-close-button"></button>
@@ -66,17 +67,28 @@
             type="text"
             id="profile-name-input"
             placeholder="Name"
+            minlength="2"
+            maxlength="40"
+            required
           />
+          <span class="profile-name-input-error modal__error_visible"></span>
           <input
             class="modal__input description"
             type="text"
             id="profile-description-input"
-            placeholder="Description"
+            placeholder="About"
+            minlength="2"
+            maxlength="200"
+            required
           />
+          <span
+            class="profile-description-input-error modal__error_visible"
+          ></span>
           <button class="modal__button">Save</button>
         </form>
       </div>
     </div>
+
     <div class="modal" id="add-card-modal">
       <div class="modal__container">
         <button class="modal__close" id="card-close-button"></button>
@@ -89,17 +101,29 @@
             id="card-title-input"
             placeholder="Title"
           />
+          <span class="card-title-input-error modal__error_visible"></span>
           <input
             name="url"
             class="modal__input description modal__input_type_url"
-            type="text"
+            type="url"
             id="card-description-input"
             placeholder="Image link"
           />
-          <button class="modal__button" id="modal-save-button">Create</button>
+          <span
+            class="card-description-input-error modal__error_visible"
+          ></span>
+          <button
+            class="modal__button modal__button_disabled"
+            id="modal-save-button"
+            type="submit"
+            disabled
+          >
+            Create
+          </button>
         </form>
       </div>
     </div>
+
     <template id="card-template">
       <li class="card">
         <button class="card__trash-button"></button>
@@ -124,6 +148,7 @@
         <p class="modal__caption"></p>
       </div>
     </div>
-    <script src="./scripts/index.js"></script>
+    <script defer src="./scripts/index.js"></script>
+    <script defer src="./scripts/validate.js"></script>
   </body>
 </html>
