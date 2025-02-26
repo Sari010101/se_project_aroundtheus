@@ -57,11 +57,11 @@
       </footer>
     </div>
 
-    <div class="modal" novalidate id="profile-edit-modal">
+    <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
         <button class="modal__close" id="profile-close-button"></button>
         <p class="modal__heading">Edit Profile</p>
-        <form class="modal__form">
+        <form class="modal__form" novalidate>
           <input
             class="modal__input title"
             type="text"
@@ -87,11 +87,11 @@
       </div>
     </div>
 
-    <div class="modal" novalidate id="add-card-modal">
+    <div class="modal" id="add-card-modal">
       <div class="modal__container">
         <button class="modal__close" id="card-close-button"></button>
         <p class="modal__heading">New Place</p>
-        <form class="modal__form" id="add-card-form">
+        <form class="modal__form" id="add-card-form" novalidate>
           <input
             name="title"
             class="modal__input title modal__input_type_title"
