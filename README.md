@@ -1,4 +1,4 @@
-# Project 3: [Around The U.S.](https://sari010101.github.io/se_project_aroundtheus/)
+# Project 3 to 6: [Around The U.S.](https://sari010101.github.io/se_project_aroundtheus/)
 
 [Video about the project](https://reccloud.com/u/wzf6wnf)
 
@@ -52,3 +52,11 @@ I also learned in the process how to:
 - delete a whole card by clicking on trash can icon
 
 - smooth transitions when opening and closing card preview ![](https://github.com/Sari010101/se_project_aroundtheus/blob/main/gifs/Smooth%20transition.gif)
+
+#### Project 6 additions
+
+- validate forms with JS
+
+- close pop-ups by clicking anywhere
+
+- close pop-ups by pressing escape key
