@@ -30,6 +30,9 @@
   margin: auto;
   padding: 36px;
   border-radius: 10px;
+  width: 430px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .modal__container_type_preview {
@@ -107,6 +110,7 @@
 .modal__error {
   color: #ff0000;
 }
+
 .modal__error_visible {
   opacity: 1;
 }
@@ -119,7 +123,7 @@
   background-color: rgba(0, 0, 0, 1);
   font-size: 18px;
   border-radius: 2px;
-  /* border: none; */
+  border: none;
   transition: 0.5s;
 }
 
@@ -131,8 +135,7 @@
   color: #000;
   opacity: 20%;
   background-color: #fff;
-  border-color: #000;
-  border-radius: 1 px;
+  border: 1px solid #000;
 }
 
 @media screen and (max-width: 625px) {

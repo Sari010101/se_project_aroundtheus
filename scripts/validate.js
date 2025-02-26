@@ -6,7 +6,7 @@ const config = {
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error_visible",
 };
-git;
+
 const formEl = document.querySelector(config.formSelector);
 const inputEl = formEl.querySelector(config.inputSelector);
 
@@ -17,18 +17,18 @@ function showInputError(formEl, inputEl, { inputErrorClass, errorClass }) {
   errorMessageEl.classList.add(errorClass);
 }
 
-function hideInputError(formEl, inputEl) {
+function hideInputError(formEl, inputEl, { inputErrorClass, errorClass }) {
   const errorMessageEl = formEl.querySelector(`.${inputEl.id}-error`);
-  inputEl.classList.remove("modal__input_type_error");
-  errorMessageEl.classList.remove("modal__error_visible");
+  inputEl.classList.remove(inputErrorClass);
+  errorMessageEl.classList.remove(errorClass);
   errorMessageEl.textContent = "";
 }
 
-function checkInputValidity(formEl, inputEl) {
+function checkInputValidity(formEl, inputEl, settings) {
   if (!inputEl.validity.valid) {
     return showInputError(formEl, inputEl, inputEl.validationMessage);
   }
-  hideInputError(formEl, inputEl);
+  hideInputError(formEl, inputEl, settings);
 }
 
 function hasInvalidInput(inputEls) {
@@ -47,28 +47,28 @@ function toggleButtonState(inputEls, submitButton, { inactiveButtonClass }) {
   submitButton.disabled = false;
 }
 
-function setEventListeners(formEl, config) {
-  const { inputSelector } = config;
+function setEventListeners(formEl, settings) {
+  const { inputSelector } = settings;
   const inputEls = Array.from(formEl.querySelectorAll(inputSelector));
   const submitButton = formEl.querySelector(".modal__button");
-  toggleButtonState(inputEls, submitButton, config);
+  toggleButtonState(inputEls, submitButton, settings);
 
   inputEls.forEach((inputEl) => {
     inputEl.addEventListener("input", () => {
-      checkInputValidity(formEl, inputEl, config);
-      toggleButtonState(inputEls, submitButton, config);
+      checkInputValidity(formEl, inputEl, settings);
+      toggleButtonState(inputEls, submitButton, settings);
     });
   });
 }
 
-function enableValidation(config) {
+function enableValidation(settings) {
   const formEls = Array.from(document.querySelectorAll(config.formSelector));
   formEls.forEach((formEl) => {
     formEl.addEventListener("submit", (evt) => {
       evt.preventDefault();
     });
 
-    setEventListeners(formEl, config);
+    setEventListeners(formEl, settings);
   });
 }
 
