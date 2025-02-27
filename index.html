@@ -62,26 +62,30 @@
         <button class="modal__close" id="profile-close-button"></button>
         <p class="modal__heading">Edit Profile</p>
         <form class="modal__form" novalidate>
-          <input
-            class="modal__input title"
-            type="text"
-            id="profile-name-input"
-            placeholder="Name"
-            minlength="2"
-            maxlength="40"
-            required
-          />
-          <span class="profile-name-input-error modal__error"></span>
-          <input
-            class="modal__input description"
-            type="text"
-            id="profile-description-input"
-            placeholder="About"
-            minlength="2"
-            maxlength="200"
-            required
-          />
-          <span class="profile-description-input-error modal__error"></span>
+          <label class="modal__label">
+            <input
+              class="modal__input title"
+              type="text"
+              id="profile-name-input"
+              placeholder="Name"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+            <span class="profile-name-input-error modal__error"></span>
+          </label>
+          <label class="modal__label">
+            <input
+              class="modal__input description"
+              type="text"
+              id="profile-description-input"
+              placeholder="About"
+              minlength="2"
+              maxlength="200"
+              required
+            />
+            <span class="profile-description-input-error modal__error"></span>
+          </label>
           <button class="modal__button">Save</button>
         </form>
       </div>
