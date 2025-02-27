@@ -96,26 +96,28 @@
         <button class="modal__close" id="card-close-button"></button>
         <p class="modal__heading">New Place</p>
         <form class="modal__form" id="add-card-form" novalidate>
-          <input
-            name="title"
-            class="modal__input title modal__input_type_title"
-            type="text"
-            id="card-title-input"
-            placeholder="Title"
-            required
-          />
-          <span class="card-title-input-error modal__error"></span>
-
-          <input
-            name="url"
-            class="modal__input description modal__input_type_url"
-            type="url"
-            id="card-description-input"
-            placeholder="Image link"
-            required
-          />
-          <span class="card-description-input-error modal__error"></span>
-
+          <label class="modal__label">
+            <input
+              name="title"
+              class="modal__input title modal__input_type_title"
+              type="text"
+              id="card-title-input"
+              placeholder="Title"
+              required
+            />
+            <span class="card-title-input-error modal__error"></span>
+          </label>
+          <label class="modal__label">
+            <input
+              name="url"
+              class="modal__input description modal__input_type_url"
+              type="url"
+              id="card-description-input"
+              placeholder="Image link"
+              required
+            />
+            <span class="card-description-input-error modal__error"></span>
+          </label>
           <button
             class="modal__button modal__button_disabled"
             id="modal-save-button"
