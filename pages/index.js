@@ -1,3 +1,5 @@
+import Card from "../components/Card.js";
+
 const initialCards = [
   {
     name: "Yosemite Valley",
@@ -24,6 +26,14 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
   },
 ];
+
+const cardData = {
+  name: "Yosemite Valley",
+  link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
+};
+
+const card = new Card(cardData, "#card-template");
+card.getView();
 
 // Elements
 
@@ -73,13 +83,9 @@ function getCardElement(cardData) {
 
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardLikeButton = cardElement.querySelector(".card__like-button");
-  cardLikeButton.addEventListener("click", () => {
-    cardLikeButton.classList.toggle("card__like-button_active");
-  });
+  cardLikeButton.addEventListener("click", handleLikeButton);
   const cardTrashButton = cardElement.querySelector(".card__trash-button");
-  cardTrashButton.addEventListener("click", (event) => {
-    event.target.closest(".card").remove();
-  });
+  // cardTrashButton.addEventListener("click", handleDeleteCard);
   cardTitleEl.textContent = cardData.name;
   cardImageEl.src = cardData.link;
   cardImageEl.alt = cardData.name;
@@ -118,6 +124,12 @@ function closeModalEsc(evt) {
 }
 
 // Event Handlers
+const handleLikeButton = (e) => {
+  e.target.classList.toggle("card__like-button_active");
+};
+// const handleDeleteCard = (e) => {
+//   e.target.closest(".card").remove();
+// };
 
 function handleProfileEditSubmit(e) {
   e.preventDefault();
