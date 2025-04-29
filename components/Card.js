@@ -38,6 +38,6 @@ export default class Card {
 
     this._setEventListeners();
 
-    return cardElement;
+    return this._cardElement;
   }
 }
