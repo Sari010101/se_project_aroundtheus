@@ -182,7 +182,5 @@ const validationSettings = {
 
 const editFormValidator = new FormValidator(validationSettings, profileFormEl);
 const addFormValidator = new FormValidator(validationSettings, addCardFormEl);
-editFormValidator._enableValidation();
-addFormValidator._enableValidation();
-
-preview;
+editFormValidator.enableValidation();
+addFormValidator.enableValidation();
