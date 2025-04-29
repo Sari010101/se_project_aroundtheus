@@ -107,6 +107,11 @@ function openPopup(modal) {
 
 function closePopup(modal) {
   modal.classList.remove("modal_opened");
+  if (modal === profileEditModal) {
+    editFormValidator.resetValidation();
+  } else if (modal === addCardModal) {
+    addFormValidator.resetValidation();
+  }
   document.removeEventListener("keydown", closeModalEsc);
   modal.removeEventListener("mousedown", closeOverlay);
 }
