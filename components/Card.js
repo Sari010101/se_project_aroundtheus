@@ -35,9 +35,9 @@ export default class Card {
       .querySelector(this._cardSelector)
       .content.querySelector(".card")
       .cloneNode(true);
-    // get the card view
-    // set event listeners
+
     this._setEventListeners();
-    // return the card
+
+    return cardElement;
   }
 }

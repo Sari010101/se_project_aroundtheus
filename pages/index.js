@@ -1,4 +1,5 @@
 import Card from "../components/Card.js";
+import FormValidator from "../components/FormValidator.js";
 
 const initialCards = [
   {
@@ -39,9 +40,9 @@ card.getView();
 
 const profileEditButton = document.querySelector("#profile-edit-button");
 const profileEditModal = document.querySelector("#profile-edit-modal");
-const profileCloseButton = profileEditModal.querySelector(
-  "#profile-close-button"
-);
+// const profileCloseButton = profileEditModal.querySelector(
+//   "#profile-close-button"
+// );
 const profileTitle = document.querySelector(".profile-title");
 const profileDescription = document.querySelector(".profile-description");
 const profileNameInput = document.querySelector("#profile-name-input");
@@ -64,9 +65,9 @@ const cardUrlInput = addCardFormEl.querySelector(".modal__input_type_url");
 const previewModal = document.querySelector("#preview-modal");
 const modalImageEl = previewModal.querySelector(".modal__image");
 const modalCaptionEl = previewModal.querySelector(".modal__caption");
-const previewModalCloseButton = previewModal.querySelector(
-  ".modal__close_type_preview"
-);
+// const previewModalCloseButton = previewModal.querySelector(
+//   ".modal__close_type_preview"
+// );
 const closeButtons = document.querySelectorAll(".modal__close");
 
 // Functions
@@ -84,7 +85,7 @@ function getCardElement(cardData) {
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardLikeButton = cardElement.querySelector(".card__like-button");
   cardLikeButton.addEventListener("click", handleLikeButton);
-  const cardTrashButton = cardElement.querySelector(".card__trash-button");
+  // const cardTrashButton = cardElement.querySelector(".card__trash-button");
   // cardTrashButton.addEventListener("click", handleDeleteCard);
   cardTitleEl.textContent = cardData.name;
   cardImageEl.src = cardData.link;
@@ -168,3 +169,20 @@ closeButtons.forEach((button) => {
   const popup = button.closest(".modal");
   button.addEventListener("click", () => closePopup(popup));
 });
+
+// Validation
+
+const validationSettings = {
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__button",
+  inactiveButtonClass: "modal__button_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error_visible",
+};
+
+const editFormValidator = new FormValidator(validationSettings, profileFormEl);
+const addFormValidator = new FormValidator(validationSettings, addCardFormEl);
+editFormValidator._enableValidation();
+addFormValidator._enableValidation();
+
+preview;
