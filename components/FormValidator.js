@@ -37,12 +37,8 @@ class FormValidator {
   }
 
   _toggleButtonState() {
-    if (!this._submitButton) {
-      this._submitButton = this._form.querySelector(this._submitButtonSelector);
-    }
     if (this._hasInvalidInput(this._inputEls)) {
-      this._submitButton.classList.add(this._inactiveButtonClass);
-      this._submitButton.disabled = true;
+      this.disableSubmitButton();
       return;
     }
     this._submitButton.classList.remove(this._inactiveButtonClass);
@@ -67,10 +63,8 @@ class FormValidator {
   }
 
   disableSubmitButton() {
-    if (this._submitButton) {
-      this._submitButton.classList.add(this._inactiveButtonClass);
-      this._submitButton.disabled = true;
-    }
+    this._submitButton.classList.add(this._inactiveButtonClass);
+    this._submitButton.disabled = true;
   }
 
   resetValidation() {
@@ -91,9 +85,7 @@ class FormValidator {
         this._form.dispatchEvent(new CustomEvent("formValid"));
       }
     });
-    this._form.addEventListener("reset", () => {
-      this.resetValidation();
-    });
+
     this._setEventListeners();
   }
 }

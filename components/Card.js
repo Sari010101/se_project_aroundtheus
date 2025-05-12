@@ -1,7 +1,7 @@
 export default class Card {
   constructor({ name, link }, cardSelector) {
     this._name = name;
-    this._linklink = link;
+    this._link = link;
     this._cardSelector = cardSelector;
   }
 
@@ -36,6 +36,13 @@ export default class Card {
       .content.querySelector(".card")
       .cloneNode(true);
 
+    const cardImage = this._cardElement.querySelector(".card__image");
+    cardImage.src = this._link;
+    cardImage.alt = this._name;
+
+    this._cardElement.querySelector(".card__title").textContent = this._name;
+
+    this._setEventListeners();
     this._setEventListeners();
 
     return this._cardElement;
